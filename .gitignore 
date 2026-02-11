@@ -1,1 +1,99 @@
-h
+# =========================================
+# Operating System Files
+# =========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# =========================================
+# IDE / Editor Files
+# =========================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains / IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.project
+.settings/
+.metadata/
+*.tmp
+
+# =========================================
+# Node / NPM / Package Managers
+# =========================================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# =========================================
+# Python / Scripts (if any used for automation)
+# =========================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+venv/
+.env.local
+.env.*.local
+
+# =========================================
+# Google Apps Script / Automation
+# =========================================
+.gsmanifest
+*.json.backup
+appsscript.json
+
+# =========================================
+# OS / Editor Swap / Backup Files
+# =========================================
+*.swp
+*.swo
+*.bak
+*.tmp
+*.old
+*.orig
+
+# =========================================
+# Generated / Output Files
+# =========================================
+*.log
+*.tmp
+*.out
+*.csv
+*.xlsx
+*.zip
+
+# =========================================
+# Metadata / Sensitive Config
+# =========================================
+metadata/*.json
+governance/*.json
+compliance/*.json
+schemas/*.schema.json
+
+# =========================================
+# Exclude Local Development Secrets
+# =========================================
+*.env
+secrets/
+credentials/
+keys/
