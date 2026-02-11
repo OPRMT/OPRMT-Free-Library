@@ -1,1 +1,244 @@
-v
+Below is a formal VERSIONING.md specification for the OPRMT™ Free Library repository.
+This is a governance-grade version control doctrine — not a casual SemVer note.
+Place at:
+Copy code
+
+/VERSIONING.md
+VERSIONING.md
+Repository: OPRMT™ Free Library
+Framework: OPRMT™ (Objective, Parameters, Results, Method, Tools)
+Owner: Michael W. Fleming
+Website: https://oprmt.solutions
+1. Versioning Authority
+This repository operates under controlled Semantic Versioning (SemVer).
+Version control applies to:
+Repository releases
+Prompt artifacts
+Taxonomy registry
+Compliance model
+Schema definitions
+Governance documents
+Final version approval authority:
+Michael W. Fleming
+2. Version Format
+All versions must follow:
+Copy code
+
+MAJOR.MINOR.PATCH
+Example:
+Copy code
+
+1.4.2
+No prefixes inside files.
+Git tags must use:
+Copy code
+
+vX.Y.Z
+Example:
+Copy code
+
+v1.4.2
+3. Repository-Level Versioning
+Repository version is tracked through:
+Git tags
+CHANGELOG.md
+Release commits
+3.1 MAJOR (X.0.0)
+Increment MAJOR when:
+OPRMT™ structural format changes
+Breaking taxonomy changes
+Compliance model restructuring
+License changes
+Schema breaking changes
+Governance model restructuring
+Example:
+Copy code
+
+1.3.4 → 2.0.0
+MAJOR updates may invalidate previous prompt compatibility.
+3.2 MINOR (0.X.0)
+Increment MINOR when:
+New prompt modules are added
+New categories added
+Non-breaking schema extensions
+Compliance scoring improvements
+Automation hooks expanded
+Example:
+Copy code
+
+1.3.4 → 1.4.0
+MINOR updates must remain backward compatible.
+3.3 PATCH (0.0.X)
+Increment PATCH when:
+Documentation corrections
+Metadata corrections
+Minor formatting updates
+Non-functional improvements
+Typo fixes
+Clarification adjustments
+Example:
+Copy code
+
+1.3.4 → 1.3.5
+PATCH updates must never alter structure or logic.
+4. Prompt-Level Versioning
+Each prompt artifact must include versioning inside:
+Copy code
+
+## Metadata
+Version: X.Y.Z
+Prompt versions are independent of repository version.
+4.1 Prompt MAJOR
+Trigger when:
+Objective changes materially
+Output structure changes
+Validation criteria altered
+Deterministic level reduced
+Core logic changed
+4.2 Prompt MINOR
+Trigger when:
+Additional validation rules added
+Optional tools added
+Method improved without breaking structure
+Clarifying expansion
+4.3 Prompt PATCH
+Trigger when:
+Grammar corrected
+Metadata updated
+Formatting improved
+Non-functional refinement
+5. Schema Versioning
+All JSON schema files must include:
+Copy code
+Json
+"version": "X.Y.Z"
+Breaking validation changes require MAJOR increment.
+6. Taxonomy Versioning
+The taxonomy registry must maintain its own version.
+Triggers:
+Change Type
+Version Bump
+New category
+MINOR
+Subcategory addition
+MINOR
+Category removal
+MAJOR
+Renaming
+MAJOR
+7. Compliance Model Versioning
+Compliance model changes impact determinism scoring.
+Change
+Version
+Weight adjustment
+MINOR
+New scoring dimension
+MINOR
+Removal of dimension
+MAJOR
+Passing score change
+MINOR
+8. Governance Document Versioning
+Files requiring version metadata:
+SECURITY.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+VERSIONING.md
+CHANGELOG.md
+Governance updates:
+Structural change → MINOR
+Enforcement rule shift → MAJOR
+Clarification → PATCH
+9. Release Process
+Each official release must:
+Increment repository version
+Update CHANGELOG.md
+Commit with:
+Copy code
+
+RELEASE: vX.Y.Z
+Create Git tag:
+Copy code
+
+vX.Y.Z
+Publish GitHub Release Notes
+10. Pre-Release Identifiers (Optional)
+Allowed format:
+Copy code
+
+1.2.0-alpha
+1.2.0-beta
+1.2.0-rc1
+Pre-release builds must not be tagged as stable.
+11. Deprecation Policy
+When prompts or categories are deprecated:
+Status must change to: deprecated
+Replacement must be referenced
+Deprecation date must be recorded
+Removal requires next MAJOR release
+12. Backward Compatibility Policy
+Free Library policy:
+MINOR and PATCH releases must preserve backward compatibility
+Only MAJOR releases may break compatibility
+Deprecated prompts remain until next MAJOR release
+13. Determinism Stability Guarantee
+If a prompt is marked:
+Copy code
+
+Status: stable
+DeterministicLevel: 4+
+It must not change behavior without MAJOR increment.
+14. Version Audit Integrity
+Prohibited:
+Retroactive editing of release history
+Silent version increments
+Untracked structural changes
+Modifying CHANGELOG after release tag
+Violations invalidate release integrity.
+15. Version Control Strategy Summary
+Artifact
+Has Version
+Independent Version
+Breakable
+Repository
+Yes
+Yes
+Yes
+Prompt
+Yes
+Yes
+Yes
+Taxonomy
+Yes
+Yes
+Yes
+Compliance Model
+Yes
+Yes
+Yes
+Governance Docs
+Yes
+Yes
+Yes
+16. Strategic Purpose
+Versioning transforms the OPRMT™ Free Library from:
+Static prompt collection
+→ Managed structured system
+→ Governed framework infrastructure
+→ Compliance-validatable engineering asset
+This supports:
+Certification engines
+SaaS validation
+Enterprise integration
+API distribution
+Document Metadata
+Document Version: 1.0.0
+Effective Date: 2026-02-11
+Repository Tier: Free Library
+Next logical hardening layer:
+RELEASE_PROCESS.md (detailed operational flow)
+GOVERNANCE.md (formal authority doctrine)
+GitHub Action validator YAML
+Automated compliance scoring engine
+Branch protection configuration policy
+Select implementation depth.
