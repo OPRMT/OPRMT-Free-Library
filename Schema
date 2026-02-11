@@ -1,1 +1,287 @@
+1. Schema Scope Definition
+Schema Layers
+Layer
+Purpose
+File Type
+L1
+Prompt Markdown Structure
+.md
+L2
+Machine-Readable Metadata
+.json
+L3
+Taxonomy Registry
+.json
+L4
+Compliance Score Model
+.json
+L5
+Repository Governance Schema
+.json
+L6
+Validation Schema
+.schema.json
+2. Canonical Prompt Artifact Schema (Human-Readable)
+Every prompt file MUST conform to:
+Copy code
 
+/prompts/{Category}/OPRMT-{Category}-{Function}-vX.X.X.md
+2.1 Markdown Structural Schema
+Copy code
+
+# OPRMT™ Prompt Title
+
+## Metadata
+ID:
+Category:
+Subcategory:
+Version:
+Status:
+Author:
+Created:
+Updated:
+License:
+ComplianceScore:
+DeterministicLevel:
+
+---
+
+## O — Objective
+(1 deterministic objective only)
+
+---
+
+## P — Parameters
+Role:
+Constraints:
+Assumptions:
+InputVariables:
+
+---
+
+## R — Results
+OutputFormat:
+RequiredSections:
+ValidationCriteria:
+
+---
+
+## M — Method
+Step-by-step deterministic execution logic.
+
+---
+
+## T — Tools
+RequiredTools:
+OptionalTools:
+AutomationHooks:
+3. Machine-Readable Metadata Schema
+Each prompt must optionally include:
+Copy code
+
+/metadata/{prompt-id}.json
+3.1 Metadata JSON Structure
+Copy code
+Json
+{
+  "id": "OPRMT-Marketing-LeadGenScript-v1.0.0",
+  "framework": "OPRMT",
+  "version": "1.0.0",
+  "category": "Marketing",
+  "subcategory": "LeadGeneration",
+  "status": "stable",
+  "author": "Michael W. Fleming",
+  "license": "Custom-OPRMT-Free",
+  "deterministic_level": 4,
+  "compliance_score": 92,
+  "created": "2026-02-11",
+  "updated": "2026-02-11",
+  "dependencies": [],
+  "automation_ready": true
+}
+4. Taxonomy Registry Schema
+Location:
+Copy code
+
+/taxonomy/taxonomy.json
+4.1 Taxonomy JSON
+Copy code
+Json
+{
+  "categories": [
+    {
+      "name": "Marketing",
+      "description": "Funnel, copy, campaign systems",
+      "subcategories": [
+        "LeadGeneration",
+        "EmailCampaign",
+        "ContentCalendar"
+      ]
+    },
+    {
+      "name": "Business",
+      "description": "Strategy and modeling systems",
+      "subcategories": [
+        "BusinessPlan",
+        "MarketAnalysis",
+        "Pricing"
+      ]
+    }
+  ],
+  "version": "1.0.0"
+}
+5. Compliance Scoring Schema
+Location:
+Copy code
+
+/compliance/compliance-model.json
+5.1 Compliance Model Structure
+Copy code
+Json
+{
+  "scoring_weights": {
+    "objective_clarity": 20,
+    "parameter_precision": 20,
+    "result_structure": 20,
+    "method_determinism": 20,
+    "tool_specification": 10,
+    "validation_criteria": 10
+  },
+  "max_score": 100,
+  "passing_score": 85,
+  "version": "1.0.0"
+}
+6. Repository Governance Schema
+Location:
+Copy code
+
+/governance/governance.json
+Copy code
+Json
+{
+  "governance_model": "Centralized",
+  "approval_authority": "Michael W. Fleming",
+  "protected_branches": ["main"],
+  "required_reviews": 1,
+  "semantic_versioning": true,
+  "release_commit_format": "RELEASE: vX.Y.Z",
+  "version": "1.0.0"
+}
+7. JSON Schema for Validation (Automation Layer)
+Location:
+Copy code
+
+/schemas/prompt.schema.json
+7.1 Prompt Metadata Validation Schema
+Copy code
+Json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OPRMT Prompt Metadata Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "framework",
+    "version",
+    "category",
+    "status",
+    "author",
+    "license",
+    "deterministic_level",
+    "compliance_score"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^OPRMT-[A-Za-z]+-[A-Za-z]+-v\\d+\\.\\d+\\.\\d+$"
+    },
+    "framework": {
+      "type": "string",
+      "enum": ["OPRMT"]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "category": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "stable", "deprecated"]
+    },
+    "deterministic_level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "compliance_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    }
+  }
+}
+8. CI Validation Workflow (GitHub Actions Concept)
+Workflow:
+On PR
+Validate:
+Filename matches pattern
+Metadata JSON validates against schema
+Compliance score ≥ passing_score
+Reject if:
+Missing required fields
+Version not incremented
+Taxonomy mismatch
+9. Deterministic Level Scale
+Level
+Definition
+1
+Creative prompt
+2
+Semi-structured
+3
+Structured
+4
+Deterministic
+5
+Fully auditable / automation-ready
+Free Library minimum: Level 3
+Preferred: Level 4+
+10. Schema Version Control Strategy
+Each schema file must include:
+Copy code
+
+"version": "X.Y.Z"
+Schema changes require:
+MINOR bump for additions
+MAJOR bump for breaking structural changes
+11. Directory Architecture
+Copy code
+
+/prompts/
+/metadata/
+/taxonomy/
+/compliance/
+/governance/
+/schemas/
+/.github/workflows/
+12. Future Automation Possibilities
+This schema supports:
+Apps Script validation
+Node CLI validator
+GitHub Action linting
+Automated compliance scoring
+Prompt registry website
+API exposure layer
+13. Strategic Positioning
+This turns OPRMT™ from:
+Prompt Collection
+→ Structured Prompt System
+→ Schema-Validated Prompt Framework
+→ Compliance-Engineered Prompt Infrastructure
+This is foundational for:
+Certification engines
+Paid libraries
+API productization
+SaaS validation services
