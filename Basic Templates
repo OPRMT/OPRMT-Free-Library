@@ -1,0 +1,171 @@
+1. OPRMT™ Podcast Episode Architect
+Objective
+Design a high-retention podcast episode blueprint optimized for authority positioning and listener completion.
+Parameters
+{PODCAST_NAME}
+{EPISODE_TOPIC}
+{TARGET_AUDIENCE}
+{EPISODE_LENGTH_MIN}
+{HOST_TONE} (e.g., analytical, conversational, authoritative)
+Results
+Structured episode outline
+Hook + open loop strategy
+Segment timing breakdown
+CTA placement
+Method
+Generate a 30-second authority hook
+Define 3–5 core segments with timestamps
+Insert cognitive open loops every 7–10 minutes
+Close with a value-aligned CTA
+Tools
+LLM reasoning + audience psychology modeling
+Novelty Enforcement
+Ensure no generic podcast structures; every segment must introduce a unique angle or insight.
+2. OPRMT™ Podcast Hook & Cold Open Generator
+Objective
+Create scroll-stopping podcast cold opens that maximize listener retention in the first 60 seconds.
+Parameters
+{TOPIC}
+{PAIN_POINT}
+{CONTROVERSY_LEVEL} (low / medium / high)
+{AUDIENCE_SOPHISTICATION}
+Results
+5 cold open variations
+Psychological trigger used (curiosity, authority, tension)
+Method
+Start with an unexpected insight
+Introduce stakes or contradiction
+Promise a payoff without revealing it
+Tools
+Narrative psychology + persuasion modeling
+Auto-Correction Rule
+Rewrite any hook that sounds promotional or generic.
+3. OPRMT™ Long-Form Podcast Script Generator
+Objective
+Generate a full podcast script that sounds human, unscripted, and intellectually credible.
+Parameters
+{EPISODE_TOPIC}
+{HOST_PERSONA}
+{TARGET_LISTENER}
+{RUNTIME}
+Results
+Natural spoken-language script
+Strategic pauses and emphasis cues
+Optional improv points
+Method
+Write in spoken syntax, not written prose
+Insert rhetorical questions
+Include micro-stories every 5–7 minutes
+Tools
+Conversational NLP modeling
+4. OPRMT™ Interview Question Intelligence Prompt
+Objective
+Generate high-signal interview questions that extract non-obvious insights from guests.
+Parameters
+{GUEST_BACKGROUND}
+{EXPERTISE_FIELD}
+{COMMON_QUESTIONS_TO_AVOID}
+{DEPTH_LEVEL}
+Results
+12–15 layered interview questions
+Follow-up probes for surface answers
+Method
+Avoid biographical questions
+Target decision points, failures, tradeoffs
+Escalate complexity across the interview
+Tools
+Expert elicitation frameworks
+5. OPRMT™ Solo Thought-Leadership Episode Generator
+Objective
+Create a solo podcast episode that positions the host as a category authority.
+Parameters
+{CORE_BELIEF}
+{INDUSTRY}
+{CONTRARIAN_ANGLE}
+{EPISODE_LENGTH}
+Results
+Structured argument arc
+Supporting examples
+Memorable takeaway framework
+Method
+Present a dominant belief
+Systematically dismantle it
+Introduce a superior model
+Tools
+Argumentation logic + narrative flow modeling
+6. OPRMT™ Podcast Storytelling Engine
+Objective
+Transform ideas into compelling podcast-ready stories.
+Parameters
+{CORE_MESSAGE}
+{STORY_TYPE} (failure, breakthrough, lesson)
+{EMOTIONAL_TONE}
+Results
+Story arc (setup → tension → insight → resolution)
+Listener takeaway
+Method
+Apply the Story → Lesson → Application loop.
+Tools
+Narrative cognition modeling
+7. OPRMT™ Podcast Content Repurposing System
+Objective
+Convert a single podcast episode into multi-platform content assets.
+Parameters
+{EPISODE_TRANSCRIPT}
+{PLATFORMS} (YouTube, LinkedIn, X, Email)
+{BRAND_VOICE}
+Results
+Short-form clips
+Quote posts
+Newsletter summary
+SEO-optimized titles
+Method
+Extract high-signal moments
+Reformat per platform logic
+Preserve original meaning
+Tools
+Content transformation heuristics
+8. OPRMT™ Podcast Monetization Strategy Prompt
+Objective
+Design ethical, audience-aligned monetization for a podcast.
+Parameters
+{PODCAST_NICHE}
+{AUDIENCE_SIZE}
+{TRUST_LEVEL}
+{OFFER_TYPES}
+Results
+Monetization pathways
+CTA scripts
+Sponsor positioning logic
+Method
+Map value → trust → offer escalation.
+Tools
+Audience economics modeling
+9. OPRMT™ Podcast Naming & Branding Prompt
+Objective
+Generate distinctive podcast names and taglines that avoid clichés.
+Parameters
+{NICHE}
+{TONE}
+{WORDS_TO_AVOID}
+Results
+20 unique name concepts
+Rationale for each
+Method
+Blend semantic contrast + memorability testing.
+Tools
+Brand linguistics modeling
+10. OPRMT™ Podcast Quality Control & Improvement Prompt
+Objective
+Audit a podcast episode and provide actionable improvements.
+Parameters
+{EPISODE_AUDIO_OR_TRANSCRIPT}
+{GOAL} (retention, authority, monetization)
+Results
+Weak point analysis
+Specific improvement actions
+Retention score (0–100)
+Method
+Evaluate structure, pacing, clarity, and signal density.
+Tools
+Content QA heuristics + listener behavior modeling
